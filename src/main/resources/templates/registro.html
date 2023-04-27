@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/back}">regresar</a>
+<hr>
+<h1>registro huespedes</h1>
+<form th:action="@{/guardarHuesped}" method="post" th:object="${huesped}">
+    <br>
+    nombre<input type="text"  name="nombre" th:field="*{nombre}">
+    <br>
+    apellido<input type="text"  name="apellido" th:field="*{apellido}">
+    <br>
+    fecha de nacimiento<input type="text"  name="fechanacimiento" th:field="*{fechanacimiento}">
+    <br>
+    nacionalidad <input type="text"  name="nacionalidad" th:field="*{nacionalidad}">
+    <br>
+    telefono <input type="text"  name="telefono" th:field="*{telefono}">
+    <br>
+
+    <button type="submit" name="guardar">guardar</button>
+</form>
+
+</body>
+</html>
